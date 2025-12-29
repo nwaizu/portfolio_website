@@ -1,0 +1,285 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f6;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= NAVIGATION ================= */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: linear-gradient(90deg, #0d47a1, #ff5252);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav h1.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffd740;
+}
+
+/* ================= SECTIONS ================= */
+section {
+  flex: 1;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #0d47a1;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* ================= HOME PAGE ================= */
+#home {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.intro-text {
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.home-buttons .btn {
+  margin: 10px;
+}
+
+/* ================= ABOUT PAGE ================= */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.profile-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #0d47a1;
+  transition: transform 0.3s;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+.personal-info p {
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 1rem;
+}
+
+.personal-info .btn {
+  margin-top: 20px;
+}
+
+/* ================= PROJECT GRID ================= */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  border-top: 5px solid #0d47a1;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  color: #0d47a1;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* ================= DEDICATED PROJECT PAGE ================= */
+#project-detail ul {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.project-screenshots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.project-screenshots img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 10px;
+  border: 2px solid #0d47a1;
+}
+
+/* ================= CONTACT PAGE ================= */
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #0d47a1, #ff5252);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #ff5252, #0d47a1);
+  transform: translateY(-2px);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #424242;
+  color: #fff;
+  margin-top: auto;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .project-card img {
+    height: 160px;
+  }
+
+  .profile-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .project-screenshots img {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+
+  .project-card img {
+    height: 140px;
+  }
+
+  .project-screenshots img {
+    width: 90%;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #home {
+    padding: 60px 15px;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-img {
+    width: 140px;
+    height: 140px;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+  }
+
+  .intro-text, .personal-info p {
+    font-size: 0.95rem;
+  }
+}
